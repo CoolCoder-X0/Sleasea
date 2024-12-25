@@ -69,5 +69,22 @@
             <div class="snowflake">❆</div>
             <div class="snowflake">❅</div>
             <div class="snowflake">❆</div>
-        </div
+        </div>
+    </div>
+    <audio autoplay>
+    <source src="jingle-bells-278637.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const snowflakes = document.querySelectorAll('.snowflake');
+            snowflakes.forEach(snowflake => {
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDelay = Math.random() * 10 + 's';
+            });
+        });
+    </script>
+</body>
+</html>
+
 

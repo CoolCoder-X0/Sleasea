@@ -71,10 +71,11 @@
             <div class="snowflake">❆</div>
         </div>
     </div>
-    <audio autoplay>
-        <source src="https://github.com/CoolCoder-X0/Sleasea/blob/95790b6fd46f19f235e7dd566917a372d8125144/jingle-bells-278637.mp3" type="audio/mpeg">
+    <audio id="christmasAudio" controls>
+        <source src="https://raw.githubusercontent.com/CoolCoder-X0/Sleasea/95790b6fd46f19f235e7dd566917a372d8125144/jingle-bells-278637.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <button onclick="document.getElementById('christmasAudio').play()">Play Music</button>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const snowflakes = document.querySelectorAll('.snowflake');
@@ -86,3 +87,4 @@
     </script>
 </body>
 </html>
+

@@ -58,6 +58,15 @@
         .snowflake:nth-child(odd) {
             animation-duration: 12s;
         }
+
+        .play-button {
+            font-size: 2em;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -70,12 +79,12 @@
             <div class="snowflake">❅</div>
             <div class="snowflake">❆</div>
         </div>
+        <button class="play-button" onclick="playMusic()">▶</button>
     </div>
-    <audio id="christmasAudio" controls>
+    <audio id="background-music">
         <source src="https://raw.githubusercontent.com/CoolCoder-X0/Sleasea/95790b6fd46f19f235e7dd566917a372d8125144/jingle-bells-278637.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <button onclick="document.getElementById('christmasAudio').play()">Play Music</button>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const snowflakes = document.querySelectorAll('.snowflake');
@@ -84,7 +93,11 @@
                 snowflake.style.animationDelay = Math.random() * 10 + 's';
             });
         });
+
+        function playMusic() {
+            const audio = document.getElementById('background-music');
+            audio.play();
+        }
     </script>
 </body>
 </html>
-
